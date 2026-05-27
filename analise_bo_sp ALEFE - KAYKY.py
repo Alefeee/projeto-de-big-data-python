@@ -43,7 +43,7 @@ for arq in sorted(arquivos):
     nome = os.path.basename(arq)
     print(f"  lendo {nome}...")
     try:
-        # le so as colunas que precisamos pra economizar memoria
+     
         df_temp = pd.read_csv(arq, encoding="latin-1", low_memory=False,
                               usecols=lambda c: c.strip() in [
                                   "ANO_BO", "ANO", "MES", "RUBRICA",
